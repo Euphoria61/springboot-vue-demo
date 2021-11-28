@@ -11,12 +11,10 @@ const request = axios.create({
 // 比如统一加token，对请求参数统一加密
 request.interceptors.request.use(config => {
     config.headers['Content-Type'] = 'application/json;charset=utf-8';
-
-
     // config.headers['token'] = user.token;  // 设置请求头
     //取出sessionStorage里面缓存 的用户信息 ，若空则需登录
     let userJson = sessionStorage.getItem("user")
-    if(!userJson){
+    if (!userJson) {
         router.push("/login")
     }
     return config

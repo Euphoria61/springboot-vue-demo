@@ -3,11 +3,12 @@
     <div style="width: 400px;margin: 150px auto">
       <div style="color: #00e6b8;text-align: center;padding: 30px 0;font-size:30px ">欢迎登录</div>
       <el-form ref="form" :model="form" :rules="rules">
+
         <el-form-item prop="username">
-          <el-input v-model="form.username"></el-input>
+          <el-input v-model="form.username" prefix-icon="i-user"></el-input>
         </el-form-item>
         <el-form-item prop="password">
-          <el-input v-model="form.password" show-password></el-input>
+          <el-input v-model="form.password" prefix-icon="i-lock" show-password></el-input>
         </el-form-item>
         <el-form-item>
           <el-button style="width: 100%" type="primary" @click="login">登录</el-button>
@@ -18,10 +19,12 @@
 </template>
 
 <script>
+
 import request from "@/utils/request";
 
 export default {
   name: "Login",
+
   data() {
     return {
       form: {},
@@ -31,6 +34,7 @@ export default {
       }
     }
   },
+
   methods: {
     login() {
       this.$refs['form'].validate((valid) => {

@@ -8,8 +8,8 @@
     </div>
     <!--    搜索区域-->
     <div style="margin: 10px 0">
-      <el-input v-model="search" placeholder="请输入关键字" style="width: 20%" clearable/>
-      <el-button type="success" style="margin-left:5px" @click="load">查询</el-button>
+      <el-input v-model="search" clearable placeholder="请输入关键字" style="width: 20%"/>
+      <el-button style="margin-left:5px" type="success" @click="load">查询</el-button>
 
     </div>
     <!--    表格-->
@@ -43,10 +43,10 @@
     <div class="demo-pagination-block" style="margin: 10px 0;text-align: center">
       <el-pagination
           v-model:currentPage="currentPage"
-          :page-sizes="[5, 10, 20]"
           :page-size="pageSize"
-          layout="total, sizes, prev, pager, next, jumper"
+          :page-sizes="[5, 10, 20]"
           :total="total"
+          layout="total, sizes, prev, pager, next, jumper"
           @size-change="handleSizeChange"
           @current-change="handleCurrentChange"
       >
@@ -72,7 +72,7 @@
           <el-radio v-model="form.sex" label="其他">其他</el-radio>
         </el-form-item>
         <el-form-item label="地址">
-          <el-input type="textarea" v-model="form.address" style="width: 80%"></el-input>
+          <el-input v-model="form.address" style="width: 80%" type="textarea"></el-input>
         </el-form-item>
         <!--        气泡提示框-->
       </el-form>

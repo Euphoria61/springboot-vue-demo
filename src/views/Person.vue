@@ -1,9 +1,9 @@
 <template>
   <div>
-      <el-page-header style="margin-top: 10px;margin-left: 10px" content="个人信息" @back="goBack" />
+    <el-page-header content="个人信息" style="margin-top: 10px;margin-left: 10px" @back="goBack"/>
     <el-card style="width: 40%; margin: 10px">
       <el-form ref="form" :model="form" label-width="80px">
-        <el-form-item style="text-align: center" label-width="0">
+        <el-form-item label-width="0" style="text-align: center">
         </el-form-item>
         <el-form-item label="用户名">
           <el-input v-model="form.username" disabled></el-input>
@@ -66,7 +66,7 @@ export default {
         }
       })
     },
-    goBack(){
+    goBack() {
       router.push("/")
     }
   }
@@ -81,9 +81,11 @@ export default {
   position: relative;
   overflow: hidden;
 }
+
 .avatar-uploader .el-upload:hover {
   border-color: #409EFF;
 }
+
 .avatar-uploader-icon {
   font-size: 28px;
   color: #8c939d;
@@ -92,6 +94,7 @@ export default {
   line-height: 120px;
   text-align: center;
 }
+
 .avatar {
   width: 178px;
   height: 178px;

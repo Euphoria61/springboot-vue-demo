@@ -1,15 +1,23 @@
 <template>
-<div style="background-color:  #944dff;width: 100%;height: 100vh;overflow: hidden ">
-  <div style="width: 400px;margin: 150px auto">
-  <div style="color: #00e6b8;text-align: center;padding: 30px 0;font-size:30px " >欢迎注册</div>
-    <el-form ref="form" :model="form" :rules="rules">
-  <el-form-item prop="username"><el-input v-model="form.username"></el-input></el-form-item>
-  <el-form-item prop="password"><el-input v-model="form.password" show-password></el-input></el-form-item>
-  <el-form-item prop="confirm"><el-input v-model="form.confirm" show-password></el-input></el-form-item>
-  <el-form-item><el-button style="width: 100%" type="primary" @click="register">注册</el-button></el-form-item>
-</el-form>
+  <div style="background-color:  #944dff;width: 100%;height: 100vh;overflow: hidden ">
+    <div style="width: 400px;margin: 150px auto">
+      <div style="color: #00e6b8;text-align: center;padding: 30px 0;font-size:30px ">欢迎注册</div>
+      <el-form ref="form" :model="form" :rules="rules">
+        <el-form-item prefix-icon="i-user" prop="username">
+          <el-input v-model="form.username"></el-input>
+        </el-form-item>
+        <el-form-item prefix-icon="i-lock" prop="password">
+          <el-input v-model="form.password" show-password></el-input>
+        </el-form-item>
+        <el-form-item prefix-icon="i-lock" prop="confirm">
+          <el-input v-model="form.confirm" show-password></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button style="width: 100%" type="primary" @click="register">注册</el-button>
+        </el-form-item>
+      </el-form>
+    </div>
   </div>
-</div>
 </template>
 
 <script>

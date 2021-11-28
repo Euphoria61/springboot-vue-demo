@@ -1,7 +1,7 @@
 <template>
-<div>
-  张子枫
-</div>
+  <div>
+    张子枫
+  </div>
 </template>
 
 <script>
